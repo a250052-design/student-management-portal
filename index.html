@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact - Student Management Portal</title>
+    <title>Student Management Portal</title>
 
     <style>
         body {
@@ -47,27 +47,22 @@
             color: #4caf50;
         }
 
-        /* SECTION */
+        /* MAIN SECTION */
         section {
             padding: 20px;
         }
 
-        h2 {
-            color: #2e7d32;
-        }
-
-        /* INFO CARDS */
+        /* CARDS */
         .card-container {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
-            margin-top: 15px;
         }
 
         .card {
             background: white;
             padding: 20px;
-            width: 280px;
+            width: 250px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s;
@@ -81,25 +76,34 @@
             color: #2e7d32;
         }
 
-        /* FORM */
-        .form-container {
-            background: white;
-            padding: 20px;
-            margin-top: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            max-width: 600px;
-        }
-
-        input, textarea {
+        /* TABLE */
+        table {
             width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
+        th {
+            background-color: #2e7d32;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* BUTTON */
         button {
             background-color: #2e7d32;
             color: white;
@@ -127,8 +131,8 @@
 <body>
 
 <header>
-    <h1>Contact Us</h1>
-    <p>We are here to help students and staff</p>
+    <h1>Student Management Portal</h1>
+    <p>Manage students, courses and results easily</p>
 </header>
 
 <nav>
@@ -141,41 +145,35 @@
 
 <section>
 
-    <h2>Contact Information</h2>
+    <h2>Dashboard Overview</h2>
 
     <div class="card-container">
         <div class="card">
-            <h3>Email Support</h3>
-            <p>admin@studentportal.com</p>
+            <h3>Students</h3>
+            <p>View and manage student records.</p>
         </div>
 
         <div class="card">
-            <h3>Phone Support</h3>
-            <p>+91 9876543210</p>
+            <h3>Courses</h3>
+            <p>Check available courses and subjects.</p>
         </div>
 
         <div class="card">
-            <h3>Office Hours</h3>
-            <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
+            <h3>Results</h3>
+            <p>Track student performance and grades.</p>
+        </div>
+
+        <div class="card">
+            <h3>Contact</h3>
+            <p>Get support from administration.</p>
         </div>
     </div>
 
-    <h2 style="margin-top:30px;">Send Us a Message</h2>
-
-    <div class="form-container">
-        <form>
-            <label>Name</label>
-            <input type="text" placeholder="Enter your name">
-
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email">
-
-            <label>Message</label>
-            <textarea rows="5" placeholder="Enter your message"></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
+    <h2 style="margin-top:30px;">Welcome Section</h2>
+    <p>
+        This Student Management Portal helps colleges and institutions manage student data efficiently.
+        You can add, view, and organize student information in a structured way.
+    </p>
 
 </section>
 
