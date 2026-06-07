@@ -1,58 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Results</title>
+    <title>Results - Student Management Portal</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
+            margin: 0;
+            background-color: #f2f4f8;
         }
 
+        /* HEADER */
+        header {
+            background: linear-gradient(90deg, #2e7d32, #1b5e20);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 16px;
+        }
+
+        /* NAVIGATION */
         nav {
-            background-color: #333;
-            padding: 10px;
+            background-color: #222;
+            padding: 12px;
+            text-align: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-right: 15px;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: yellow;
+            color: #4caf50;
+        }
+
+        /* SECTION */
+        section {
+            padding: 20px;
         }
 
         h2 {
-            color: #0077cc;
+            color: #2e7d32;
         }
 
+        /* TABLE */
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: white;
             margin-top: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid black;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         th {
-            background-color: #0077cc;
+            background-color: #2e7d32;
             color: white;
+            padding: 12px;
         }
 
-        th, td {
-            padding: 10px;
+        td {
+            padding: 12px;
             text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* CARDS */
+        .card-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2e7d32;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+            margin-top: 30px;
         }
     </style>
 </head>
 
 <body>
+
+<header>
+    <h1>Student Results</h1>
+    <p>Track academic performance and grades</p>
+</header>
 
 <nav>
     <a href="index.html">Home</a>
@@ -62,30 +134,57 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<h2>Student Results</h2>
+<section>
 
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Marks</th>
-        <th>Grade</th>
-    </tr>
-    <tr>
-        <td>Rahul Sharma</td>
-        <td>85</td>
-        <td>A</td>
-    </tr>
-    <tr>
-        <td>Priya Patil</td>
-        <td>78</td>
-        <td>B+</td>
-    </tr>
-    <tr>
-        <td>Amit Kumar</td>
-        <td>70</td>
-        <td>B</td>
-    </tr>
-</table>
+    <h2>Performance Overview</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Top Performer</h3>
+            <p>Rahul Sharma - 85 Marks</p>
+        </div>
+
+        <div class="card">
+            <h3>Average Score</h3>
+            <p>78 Marks</p>
+        </div>
+
+        <div class="card">
+            <h3>Pass Rate</h3>
+            <p>100%</p>
+        </div>
+    </div>
+
+    <h2 style="margin-top:30px;">Results Table</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Marks</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td>Rahul Sharma</td>
+            <td>85</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Priya Patil</td>
+            <td>78</td>
+            <td>B+</td>
+        </tr>
+        <tr>
+            <td>Amit Kumar</td>
+            <td>70</td>
+            <td>B</td>
+        </tr>
+    </table>
+
+</section>
+
+<footer>
+    © 2026 Student Management Portal | All Rights Reserved
+</footer>
 
 </body>
 </html>

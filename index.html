@@ -1,71 +1,125 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Management Portal</title>
+    <title>Contact - Student Management Portal</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            background-color: #f2f4f8;
         }
 
+        /* HEADER */
         header {
-            background-color: #0077cc;
+            background: linear-gradient(90deg, #2e7d32, #1b5e20);
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 25px;
         }
 
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 16px;
+        }
+
+        /* NAVIGATION */
         nav {
-            background-color: #333;
-            padding: 10px;
+            background-color: #222;
+            padding: 12px;
+            text-align: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-right: 15px;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: yellow;
+            color: #4caf50;
         }
 
+        /* SECTION */
         section {
-            margin-top: 20px;
+            padding: 20px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+        h2 {
+            color: #2e7d32;
         }
 
-        table, th, td {
-            border: 1px solid black;
+        /* INFO CARDS */
+        .card-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
         }
 
-        th, td {
-            padding: 10px;
-            text-align: center;
+        .card {
+            background: white;
+            padding: 20px;
+            width: 280px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2e7d32;
+        }
+
+        /* FORM */
+        .form-container {
+            background: white;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
         }
 
         input, textarea {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
         button {
-            background-color: #0077cc;
+            background-color: #2e7d32;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 15px;
             border: none;
             cursor: pointer;
+            border-radius: 5px;
         }
 
         button:hover {
-            background-color: #005fa3;
+            background-color: #1b5e20;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -73,8 +127,8 @@
 <body>
 
 <header>
-    <h1>Student Management Portal</h1>
-    <p>Welcome to the Student Management Portal</p>
+    <h1>Contact Us</h1>
+    <p>We are here to help students and staff</p>
 </header>
 
 <nav>
@@ -86,9 +140,48 @@
 </nav>
 
 <section>
-    <h2>Portal Introduction</h2>
-    <p>This portal helps manage student records, courses, and results.</p>
+
+    <h2>Contact Information</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Email Support</h3>
+            <p>admin@studentportal.com</p>
+        </div>
+
+        <div class="card">
+            <h3>Phone Support</h3>
+            <p>+91 9876543210</p>
+        </div>
+
+        <div class="card">
+            <h3>Office Hours</h3>
+            <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
+        </div>
+    </div>
+
+    <h2 style="margin-top:30px;">Send Us a Message</h2>
+
+    <div class="form-container">
+        <form>
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Message</label>
+            <textarea rows="5" placeholder="Enter your message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
 </section>
+
+<footer>
+    © 2026 Student Management Portal | All Rights Reserved
+</footer>
 
 </body>
 </html>

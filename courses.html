@@ -1,58 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Courses</title>
+    <title>Courses - Student Management Portal</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
+            margin: 0;
+            background-color: #f2f4f8;
         }
 
+        /* HEADER */
+        header {
+            background: linear-gradient(90deg, #2e7d32, #1b5e20);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 16px;
+        }
+
+        /* NAVIGATION */
         nav {
-            background-color: #333;
-            padding: 10px;
+            background-color: #222;
+            padding: 12px;
+            text-align: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-right: 15px;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: yellow;
+            color: #4caf50;
+        }
+
+        /* SECTION */
+        section {
+            padding: 20px;
         }
 
         h2 {
-            color: #0077cc;
+            color: #2e7d32;
         }
 
+        /* TABLE */
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: white;
             margin-top: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid black;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         th {
-            background-color: #0077cc;
+            background-color: #2e7d32;
             color: white;
+            padding: 12px;
         }
 
-        th, td {
-            padding: 10px;
+        td {
+            padding: 12px;
             text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* CARDS */
+        .card-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2e7d32;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+            margin-top: 30px;
         }
     </style>
 </head>
 
 <body>
+
+<header>
+    <h1>Courses</h1>
+    <p>Explore available subjects and learning modules</p>
+</header>
 
 <nav>
     <a href="index.html">Home</a>
@@ -62,26 +134,53 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<h2>Course List</h2>
+<section>
 
-<table>
-    <tr>
-        <th>Course Code</th>
-        <th>Course Name</th>
-    </tr>
-    <tr>
-        <td>CS101</td>
-        <td>Web Development</td>
-    </tr>
-    <tr>
-        <td>CS102</td>
-        <td>Database Management System</td>
-    </tr>
-    <tr>
-        <td>CS103</td>
-        <td>Operating System</td>
-    </tr>
-</table>
+    <h2>Available Courses</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>CS101</h3>
+            <p>Web Development</p>
+        </div>
+
+        <div class="card">
+            <h3>CS102</h3>
+            <p>Database Management System</p>
+        </div>
+
+        <div class="card">
+            <h3>CS103</h3>
+            <p>Operating System</p>
+        </div>
+    </div>
+
+    <h2 style="margin-top:30px;">Course Table</h2>
+
+    <table>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+        </tr>
+        <tr>
+            <td>CS101</td>
+            <td>Web Development</td>
+        </tr>
+        <tr>
+            <td>CS102</td>
+            <td>Database Management System</td>
+        </tr>
+        <tr>
+            <td>CS103</td>
+            <td>Operating System</td>
+        </tr>
+    </table>
+
+</section>
+
+<footer>
+    © 2026 Student Management Portal | All Rights Reserved
+</footer>
 
 </body>
 </html>
