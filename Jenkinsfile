@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Test') {
+            steps {
+                bat 'dir'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t student-portal .'
